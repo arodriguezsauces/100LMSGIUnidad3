@@ -14,4 +14,12 @@ body.style.textAlign="center"
 
 titulo.style.color="#333"
 titulo.style.textTransform="uppercase"
-titulo.style
+
+
+par.style.size="18px"
+
+par[0].style.color="#f4f4f4"
+par[0].style.backgroundColor="#ffe6e6"
+par[0].style.border=""
+par[1]
+par[2]
