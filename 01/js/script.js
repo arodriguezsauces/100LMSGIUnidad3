@@ -1,15 +1,39 @@
-var titulo = document.getElementById("titulo")
-var parrafo = document.getElementsByClassName("parrafo")
-var cuerpo = document.getElementById("cuerpo")
-
-titulo.innerText = "Nuevo titulo"
-parrafo[0].innerText = "parrafo 1 modificado"
-parrafo[1].innerText = "parrafo 2 modificado"
-parrafo[2].innerText = "parrafo 3 modificado"
-
-parrafo[0].outerHTML = "<div>Parrafo 11 modificado</div>"
-
-cuerpo.style.backgroundColor = "#f4f4f4"
-cuerpo.style.textAlign = "center"
-
-titulo.style.color = "#333"
+//titulo//
+var titulo = document.getElementById("titulo");
+titulo.textContent = "Título Modificado";
+titulo.style.color = "#333";
+titulo.style.marginBottom = "15px";
+titulo.style.textTransform = "uppercase";
+titulo.style.textAlign = "center";
+//cuerpo//
+var cuerpo = document.getElementById("cuerpo");
+cuerpo.style.backgroundColor = "#f4f4f4";
+cuerpo.style.textAlign = "center";
+//parrafos//
+var parrafo1 = document.getElementsByClassName("parrafo")[0];
+parrafo1.textContent = "Parrafo 1 modificado.";
+parrafo1.style.fontSize = "18px";
+parrafo1.style.padding = "10px";
+parrafo1.style.width = "60%";
+parrafo1.style.borderRadius = "5px";
+parrafo1.style.color = "#e74c3c";
+parrafo1.style.backgroundColor = "#ffe6e6";
+parrafo1.style.margin = "10px auto";
+var parrafo2 = document.getElementsByClassName("parrafo")[1];
+parrafo2.textContent = "Parrafo 2 modificado.";
+parrafo2.style.fontSize = "18px";
+parrafo2.style.padding = "10px";
+parrafo2.style.width = "60%";
+parrafo2.style.borderRadius = "5px";
+parrafo2.style.color = "#2ecc71";
+parrafo2.style.backgroundColor = "#eaffea";
+parrafo2.style.margin = "10px auto";
+var parrafo3 = document.getElementsByClassName("parrafo")[2];
+parrafo3.textContent = "Parrafo 3 modificado.";
+parrafo3.style.fontSize = "18px";
+parrafo3.style.padding = "10px";
+parrafo3.style.width = "60%";
+parrafo3.style.borderRadius = "5px";
+parrafo3.style.color = "#3498db";
+parrafo3.style.backgroundColor = "#e6f2ff";
+parrafo3.style.margin = "10px auto";
