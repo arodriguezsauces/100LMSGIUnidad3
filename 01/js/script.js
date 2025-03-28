@@ -1,6 +1,6 @@
 //titulo//
 var titulo = document.getElementById("titulo");
-titulo.textContent = "Título Modificado";
+titulo.textContent = "Titulo Modificado";
 titulo.style.color = "#333";
 titulo.style.marginBottom = "15px";
 titulo.style.textTransform = "uppercase";
