@@ -57,13 +57,12 @@ function cambiarColor(){
 }
 
 function cambiarpar(){
-    var par = document.getElementsByClassName("parrafo");
-    for(let i=0; i<par; i++){
-        par[i].style.fontSize="38px";
-        par[i].style.letterSpacing="8px";
-        pat[i].style.rotate = "1deg";
-        par[i].style.fontWeight="bold";
-    }    
+    for(let a=0; a<par.length; a++){
+        par[a].style.fontSize="38px";
+        par[a].style.letterSpacing="8px";
+        par[a].style.transform = "rotate(1deg)";
+        par[a].style.fontWeight="bold";
+    }
 }
 
 var foter= document.getElementById("footer");
