@@ -1,20 +1,25 @@
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ejemplo 1 DOM</title>
+<title>Ejemplo 1 DOM</title>
     <!-- defer indica que se ejecuta cuando el DOM esta-->
     <script src="js/script.js" defer></script>
     <style>
       footer{
         background-color: black;
+        width: 100%;
       }
       .footerp{
         text-align: center;
         color: white;
       }
-      
+      .nombre{
+        color:beige
+      }
+      button{
+        background-color: rgb(0, 102, 255);
+        color: white;
+        margin-top: 5px;
+        border-radius: 3px;
+        border-color: rgb(0, 102, 255);
+      }
     </style>
   </head>
   <body id="cuerpo">
@@ -26,7 +31,7 @@
       <button id="boton 1">Saludar</button>
       <button id="boton 2">Fondo Oscuro</button>
       <button id="boton 3">Cambiar Parrafos</button>
-      <p class="footerp">Todos los derechos reservados. Creado por Adrian Espino Peña</p>
+      <p class="footerp">Todos los derechos reservados. Creado por </p><p class="nombre">Adrian Espino Peña</p>
     </footer>
   </body>
 </html>
