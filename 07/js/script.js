@@ -1,8 +1,8 @@
 document.getElementById("agregarFinal").addEventListener("click", function(){
     // Crear un nuevo párrafo
-   
+    let parrafo = document.createElement("p")
     //añadir texto al párrafo
-  
+    parrafo.innerText = "nuevo parrafo 1"
     //añadir el párrafo al contenedor
    
     //agregar el color de texto del nuevo parrafo sea rojo
