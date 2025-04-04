@@ -3,9 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejemplo 4 DOM</title>
+    <title>Ejemplo 5 DOM</title>
 </head>
 <body>
     <header class="card"></header>
+    <script>
+        // 1
+        var header = document.querySelector("header");
+        // 2
+        var titulo = document.createElement("h1");
+        titulo.textContent = "Esto es un título";
+        header.appendChild(titulo);
+        // 3
+        var parrafo = document.createElement("p");
+        parrafo.textContent = "Esto es un parrafo";
+        titulo.appendChild(parrafo);
+        // 4
+        header.style.backgroundColor = "#f0f0f0";
+        header.style.padding = "10px";
+    </script>
 </body>
 </html>
