@@ -1,6 +1,5 @@
 # Ejemplo 3 Acceso a elementos
-
- > Mediane un script escribe en consola los siguientes datos, teniendo en cuenta que primero hay que seleccionar y luego escribir el valor con console.log()
+ > Mediane un script escribe en consola los siguientes datos, teniendo en cuenta que primer hay que seleccionar y luego escribir el valor con sonole.log()
 > 
 
 1. Imprime el número de nodos hijos del elemento <body>
