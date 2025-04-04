@@ -23,9 +23,69 @@
             <input type="button" id="eliminarTodos" value="Eliminar todos los párrafos" />
         </div>
     </footer>
-
-
     <script>
+            // Agregar un párrafo al final
+        document.getElementById("agregarFinal").addEventListener("click", function() {
+            // Crear un nuevo párrafo
+            let parrafo = document.createElement("p");
+            // Añadir texto al final del párrafo
+            let texto = document.getElementById("texto").value;
+            parrafo.textContent = texto;
+            // Agregar el color de texto del nuevo párrafo sea rojo
+            parrafo.style.color = "red";
+            // Añadir el párrafo al contenedor
+            document.getElementById("contenedor").appendChild(parrafo);
+        });
+
+        // Agregar un párrafo al principio
+        document.getElementById("agregarPpio").addEventListener("click", function() {
+            // Crear un nuevo párrafo
+            let parrafo = document.createElement("p");
+            // Añadir texto al principio del párrafo
+            let texto = document.getElementById("texto").value;
+            parrafo.textContent = texto;
+            // Agregar estilos al párrafo, texto azul
+            parrafo.style.color = "blue";
+            // Añadir el párrafo al contenedor
+            document.getElementById("contenedor").prepend(parrafo);
+        });
+
+        // Agregar un párrafo en una posición concreta
+        document.getElementById("agregarPosicion").addEventListener("click", function() {
+            // Crear un nuevo párrafo
+            let parrafo = document.createElement("p");
+            // Añadir texto al párrafo
+            let texto = document.getElementById("texto").value;
+            parrafo.textContent = texto;
+            // Agregar estilos, color del texto verde
+            parrafo.style.color = "green";
+            
+            let contenedor = document.getElementById("contenedor");
+            let posicion = parseInt(prompt("Introduce la posición (empezando desde 1):")) - 1;
+            
+            let elementos = contenedor.getElementsByTagName("p");
+            // Añadir el párrafo al contenedor en la posición indicada
+            if (posicion >= 0 && posicion <= elementos.length) {
+                contenedor.insertBefore(parrafo, elementos[posicion] || null);
+            } else {
+                alert("Posición no válida");
+            }
+        });
+
+        // Eliminar el primer párrafo
+        document.getElementById("eliminar").addEventListener("click", function() {
+            let contenedor = document.getElementById("contenedor");
+            // Eliminar el primer párrafo
+            if (contenedor.firstChild) {
+                contenedor.removeChild(contenedor.firstChild);
+            }
+        });
+
+        // Eliminar todos los párrafos
+        document.getElementById("eliminarTodos").addEventListener("click", function() {
+            // Eliminar todos los párrafos
+            document.getElementById("contenedor").innerHTML = "";
+        });
     </script>
 </body>
 
