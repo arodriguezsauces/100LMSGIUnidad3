@@ -1,18 +1,56 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Ejemplo 8 DOM</title>
-      <link rel="stylesheet" href="css/estilos.css" />
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo 8 DOM</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
   <body>
     <h1>Ejemplo 8 DOM: Crear tabla</h1>
-    <label for="filas">Número de filas:</label>
-    <input type="number" id="filas" min="1" max="10" value="2">  
-    <label for="numerocolumnas">Número de columnas:</label>
-    <input type="number" id="numerocolumnas"  min="1" max="10" value="2">
-    <input type="button" value="Genera una tabla" onclick="genera_tabla()" />
+ 
+    <label for="filas"><b>Número de filas:</b></label><br><br>
+    <input class="botong" type="number" id="filas" min="1" max="10" value="2"> <br><br>  
+ 
+    <label for="numerocolumnas"><b>Número de columnas:</b></label><br><br>
+    <input class="botonb" type="number" id="numerocolumnas" min="1" max="10" value="2">
+ 
+    <input class="botong" type="button" value="Genera una tabla" onclick="genera_tabla()" />
+ 
+    <!-- Contenedor para la tabla -->
+    <div id="contenedor-tabla"></div>
+ 
+    <script>
+      function genera_tabla() {
+        const filas = document.getElementById("filas").value;
+        const columnas = document.getElementById("numerocolumnas").value;
+        const contenedor = document.getElementById("contenedor-tabla");
+ 
+        // Limpiar la tabla anterior si existe
+        contenedor.innerHTML = "";
+ 
+        // Crear la tabla
+        const tabla = document.createElement("table");
+        const tbody = document.createElement("tbody");
+ 
+        for (let f = 1; f <= filas; f++) {
+          const tr = document.createElement("tr");
+ 
+          for (let c = 1; c <= columnas; c++) {
+            const td = document.createElement("td");
+            const textocelda = document.createTextNode("Fila " + f + ", Columna " + c);
+            td.appendChild(textocelda);
+            tr.appendChild(td);
+          }
+ 
+          tbody.appendChild(tr);
+        }
+ 
+        tabla.appendChild(tbody);
+        tabla.setAttribute("border", "2");
+        contenedor.appendChild(tabla);
+      }
+    </script>
   </body>
-  <script></script>
-  </html>
+</html>
+ 
